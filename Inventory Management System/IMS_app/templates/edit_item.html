@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Edit Product</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Bootstrap Links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+
+  <style>
+    #LV {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 27px;
+    }
+
+    body {
+      padding-top: 65px;
+    }
+
+    .bg {
+      background-image: url("{% static 'ims_app/Background_Picture.jpg' %}");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .writing {
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .form{
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: white;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+
+<body class="bg">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" id="LV" href="https://eu.louisvuitton.com/eng-e1/homepage">
+      <img src="{% static 'ims_app/Louis_Vuitton_LV_logo.png' %}" width="40" height="40"
+        class="d-inline-block align-top" alt="">
+      Louis Vuitton
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'inventory' %}">Inventory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+    </ul>
+  </nav>
+  <br><br>
+    <h1 class="text-white writing">Edit Item</h1>
+    <br>
+  <form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="buttons">
+        <a href="{% url 'inventory' %}" class="btn btn-lg btn-secondary">&#8592; Go Back</a>
+        <button type="submit" class="btn btn-lg btn-primary">Save</button>
+    </div>
+    
+  </form>
+
+  <br><br>
+  <!-- Footer -->
+  <footer class="pt-5 d-flex justify-content-between fixed-bottom">
+    <span class="text-white">Copyright © 2023 <a href="https://eu.louisvuitton.com/eng-e1/homepage">Louis Vuitton</a></span>
+    <ul class="nav m-0">
+      <li class="nav-item">
+        <a class="nav-link text-secondary" aria-current="page"
+          href="https://www.instagram.com/louisvuitton/?hl=en">Instagram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="https://www.twitter.com/LouisVuitton/?hl=en">Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="https://www.linkedin.com/company/louis-vuitton">LinkedIn</a>
+      </li>
+    </ul>
+  </footer>

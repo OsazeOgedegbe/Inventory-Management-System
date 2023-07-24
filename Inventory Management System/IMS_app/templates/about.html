@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Bootstrap Links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+
+  <style>
+    #LV {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 27px;
+    }
+
+    body {
+      padding-top: 65px;
+    }
+
+    .bg {
+      background-image: url("{% static 'ims_app/Background_Picture.jpg' %}");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .writing {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+
+<body class="bg">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" id="LV" href="https://eu.louisvuitton.com/eng-e1/homepage">
+      <img src="{% static 'ims_app/Louis_Vuitton_LV_logo.png' %}" width="40" height="40"
+        class="d-inline-block align-top" alt="">
+      Louis Vuitton
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'inventory' %}">Inventory</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="writing text-white">
+    <br><br>
+<h5>
+    Louis Vuitton is a name that has been synonymous with luxury fashion and high-end accessories for over a century. 
+    The company has become a worldwide icon of style, sophistication, and elegance. With a legacy that dates back to the 
+    mid-19th century, the company has evolved from a small luggage manufacturer to one of the world's most recognizable 
+    and prestigious brands.
+  </h5>
+<br><br>
+  <h5>
+    As Louis Vuitton has expanded and grown, the company has faced the challenges of managing its inventory across a 
+    global network of stores and locations. In order to maintain its high standards of quality and service, Louis Vuitton 
+    requires a sophisticated and efficient inventory management system that can keep pace with the demands of a fast-moving 
+    global marketplace.
+  </h5>
+<br><br>
+  <h5>
+    At Louis Vuitton, we understand the importance of inventory management in maintaining the quality of our brand and ensuring 
+    customer satisfaction. We are proud to offer a state-of-the-art inventory management system that leverages the latest 
+    technology to provide our customers with a seamless and satisfying shopping experience.
+  </h5>
+<br><br>
+  <h5>
+    Our inventory management system is designed to be accurate, efficient, and user-friendly. We use sophisticated 
+    algorithms and advanced analytics to track products from the moment they are manufactured to the moment they are sold, 
+    ensuring that our stores always have the right products in stock at the right time. Our system is also designed to be 
+    scalable, so that we can easily adapt to changes in demand and adjust our inventory levels as needed.
+  </h5>
+<br><br>
+  <h5>
+    At Louis Vuitton, we are committed to excellence in everything we do. We take great pride in our inventory management 
+    system and the role it plays in maintaining the quality of our brand. Our team of experts is dedicated to ensuring that 
+    our system is always up-to-date and that it meets the unique needs and requirements of our stores around the world.
+  </h5>
+<br><br>
+  <h5>
+    We believe that our inventory management system is an essential component of our success as a company, and we are 
+    committed to investing in its ongoing development and improvement. We are constantly exploring new technologies and 
+    techniques to enhance the efficiency and accuracy of our system, and we are always looking for ways to improve the 
+    customer experience.
+  </h5>
+  </div>
+
+  <br><br><br>
+  <!-- Footer -->
+  <footer class="pt-5 d-flex justify-content-between fixed-bottom">
+    <span class="text-white">Copyright © 2023 <a href="https://eu.louisvuitton.com/eng-e1/homepage">Louis
+        Vuitton</a></span>
+    <ul class="nav m-0">
+      <li class="nav-item">
+        <a class="nav-link text-secondary" aria-current="page"
+          href="https://www.instagram.com/louisvuitton/?hl=en">Instagram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="https://www.twitter.com/LouisVuitton/?hl=en">Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="https://www.linkedin.com/company/louis-vuitton">LinkedIn</a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript Bootstrap Links -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>
+  
